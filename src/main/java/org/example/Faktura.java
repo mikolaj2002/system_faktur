@@ -1,30 +1,47 @@
+//HIGH COHESION: klasa Faktura odpowiada za przechowywanie informacji o fakturze
+//              i wyświetlanie oraz wysyłanie ich
+
 package org.example;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Faktura {
-    public String nr_faktury;
-    private Osoba sprzedawca;
-    private Osoba nabywca;
-    private String data;
-    private ArrayList<Element> elementy;
+    private final String nrFaktury;
+    Osoba sprzedawca;
+    Osoba nabywca;
+    String data;
+    final ArrayList<Element> elementy;
 
-    Faktura() {
-        elementy = new ArrayList<Element>();
+    //CREATOR: klasa Faktura tworzy obiekty klasy Osoba, ponieważ są one tylko dla niej potrzebne
+    Faktura() throws IOException {
+        elementy = new ArrayList<>();
+
+        System.out.print("\nPodaj numer faktury: ");
+        nrFaktury = TakeInput.reader.readLine();
+
+        System.out.print("Podaj datę: ");
+        data = TakeInput.reader.readLine();
+
+        System.out.println("\nSprzedawca:");
+        sprzedawca = new Osoba();
+
+        System.out.println("\nNabywca:");
+        nabywca = new Osoba();
     }
 
-    Faktura(String nf, Osoba s, Osoba n, String d) {
-        elementy = new ArrayList<Element>();
-        nr_faktury = nf;
-        sprzedawca = s;
-        nabywca = n;
-        data = d;
-    }
+    public String getNrFaktury() { return nrFaktury; }
 
     public void dodajElement(Element e) {
         elementy.add(e);
     }
 
+    public void dodajElementZWejscia() throws IOException {
+        //CREATOR: klasa Faktura tworzy obiekty Element, ponieważ tylko ona je wykorzystuje
+        dodajElement(new Element());
+    }
+
+    //EXPERT: klasa Faktura liczy kwotę całej faktury
     public Kwota policzKwoteFaktury() {
         float cenaNetto = 0, kwotaPodatku = 0;
         for (Element e : elementy) {
@@ -34,28 +51,7 @@ public class Faktura {
         return new Kwota(cenaNetto, kwotaPodatku);
     }
 
-    void wyswietl() {
-        System.out.println("\n-------------------------");
-        System.out.println("Data wystawienia: " + data);
-        System.out.println("Numer faktury: " + nr_faktury);
-
-        System.out.println("\nSprzedawca:");
-        sprzedawca.wyswietl();
-
-        System.out.println("\nNabywca:");
-        nabywca.wyswietl();
-
-        System.out.println("\nElementy:");
-        System.out.println("Lp.\tNazwa\tIlość\tCena netto\tVAT\tCena brutto");
-
-        for (Element e : elementy) {
-            e.wyswietl(elementy.indexOf(e) + 1);
-        }
-
-        Kwota kFaktury = policzKwoteFaktury();
-        System.out.println("\nŁączna kwota netto: " + kFaktury.getCenaNetto());
-        System.out.println("Łączna kwota VAT: " + kFaktury.getKwotaPodatku());
-        System.out.println("Łączna kwota brutto: " + kFaktury.getCenaBrutto());
-        System.out.println("-------------------------\n");
+    public void wyswietl() {
+        ShowOutput.pokazFaktura(this);
     }
 }

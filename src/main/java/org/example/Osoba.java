@@ -1,27 +1,35 @@
+//HIGH COHESION: klasa Osoba odpowiada za przechowywanie informacji
+//              o sprzedawcy/nabywcy i ich wyświetlanie
+
 package org.example;
 
+import java.io.IOException;
+
 public class Osoba {
-    private String nazwa;
-    private String adres;
-    private String NIP;
-    private String email;
-    private String nr_telefonu;
+    final String nazwa;
+    final String adres;
+    final String NIP;
+    final String email;
+    final String nrTelefonu;
 
-    Osoba() {}
+    Osoba() throws IOException {
+        System.out.print("Podaj nazwę: ");
+        nazwa = TakeInput.reader.readLine();
 
-    Osoba(String n, String a, String nip, String e, String nt) {
-        nazwa = n;
-        adres = a;
-        NIP = nip;
-        email = e;
-        nr_telefonu = nt;
+        System.out.print("Podaj adres: ");
+        adres = TakeInput.reader.readLine();
+
+        System.out.print("Podaj numer NIP: ");
+        NIP = TakeInput.reader.readLine();
+
+        System.out.print("Podaj adres e-mail: ");
+        email = TakeInput.reader.readLine();
+
+        System.out.print("Podaj numer telefonu: ");
+        nrTelefonu = TakeInput.reader.readLine();
     }
 
-    void wyswietl() {
-        System.out.println(nazwa);
-        System.out.println(adres);
-        System.out.println("NIP: " + NIP);
-        System.out.println("E-mail: " + email);
-        System.out.println("Nr telefonu: " + nr_telefonu);
+    public void wyswietl() {
+        ShowOutput.pokazOsoba(this);
     }
 }

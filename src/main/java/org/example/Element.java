@@ -1,33 +1,30 @@
+//HIGH COHESION: klasa Element odpowiada za przechowywanie informacji o elemencie,
+//              jak i liczenie kwot dla elementu
+
 package org.example;
 
+import java.io.IOException;
+
 public class Element {
-    private Towar towar;
-    private int ilosc;
-    private Kwota kwota;
+    final Towar towar;
+    final int ilosc;
+    private final Kwota kwota;
 
-    Element() {}
+    Element() throws IOException {
+        System.out.println("\nTowar:");
+        //CREATOR: Klasa Element tworzy obiekt klasy Towar, ponieważ tylko ona go wykorzystuje
+        towar = new Towar();
 
-    Element(Towar t, int i) {
-        towar = t;
-        ilosc = i;
-        kwota = new Kwota(towar.getCena() * ilosc, towar.getVAT());
+        System.out.print("Podaj ilość: ");
+        ilosc = Integer.parseInt(TakeInput.reader.readLine());
+
+        //EXPERT: klasa Element liczy cenę elementu
+        kwota = new Kwota(ilosc * towar.getCena(), towar.getVAT());
     }
 
-    Towar getTowar() {
-        return towar;
-    }
-
-    int getIlosc() {
-        return ilosc;
-    }
-
-    Kwota getKwota() {
-        return kwota;
-    }
+    public Kwota getKwota() { return kwota; }
 
     void wyswietl(int lp) {
-        System.out.println(lp + ".\t" + towar.getNazwa() + '\t' + ilosc + '\t'
-                + ilosc * towar.getCena() + '\t' + towar.getVAT()
-                + '\t' + ilosc * towar.getCena() * (1 + towar.getVAT() / 100.0));
+        ShowOutput.pokazElement(lp, this);
     }
 }

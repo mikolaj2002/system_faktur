@@ -1,29 +1,25 @@
+//HIGH COHESION: klasa Kwota odpowiada za liczenie kwot brutto, wysokości podatku
+
+//PURE FABRICATION: klasa Kwota liczy kwoty brutto i wysokość podatku,
+//                  bo jest to używane w wielu miejscach w programie
+
 package org.example;
 
 public class Kwota {
-    private float cenaNetto;
-    private int procentVAT;
-    private float kwotaPodatku;
-    private float cenaBrutto;
-
-    private void obliczKwoty() {
-        if (kwotaPodatku != -1)
-            kwotaPodatku = Math.round((procentVAT / 100.0f) * cenaNetto * 100.0f) / 100.0f;
-        cenaBrutto = cenaNetto + kwotaPodatku;
-    }
-
-    Kwota() {}
+    private final float cenaNetto;
+    private final float kwotaPodatku;
+    private final float cenaBrutto;
 
     Kwota(float cn, int pVAT) {
-        cenaNetto = cn;
-        procentVAT = pVAT;
-        kwotaPodatku = -1;
-        obliczKwoty();
+        cenaNetto = Math.round(cn * 100.0f) / 100.0f;
+        kwotaPodatku = Math.round((pVAT / 100.0f) * cenaNetto * 100.0f) / 100.0f;
+        cenaBrutto = Math.round((cenaNetto + kwotaPodatku) * 100.0f) / 100.0f;
     }
 
     Kwota(float cn, float pod) {
-        cenaNetto = cn;
-        kwotaPodatku = pod;
+        cenaNetto = Math.round(cn * 100.0f) / 100.0f;
+        kwotaPodatku = Math.round(pod * 100.0f) / 100.0f;
+        cenaBrutto = Math.round((cenaNetto + kwotaPodatku) * 100.0f) / 100.0f;
     }
 
     public float getCenaNetto() {
