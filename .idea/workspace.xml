@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f53392-4176-4d7c-bbcb-049cd5ff5369" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ShowOutput.java" afterDir="false" />
+    <list default="true" id="18f53392-4176-4d7c-bbcb-049cd5ff5369" name="Changes" comment="poprawki GRASP i PMD">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyleidea-libs/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ElementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FakturaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Element.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Faktura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Faktura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Kwota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Kwota.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Osoba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Osoba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TakeInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TakeInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Towar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Towar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +53,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +72,9 @@
       <workItem from="1668435632223" duration="867000" />
       <workItem from="1668438816754" duration="2292000" />
       <workItem from="1668509885410" duration="5016000" />
-      <workItem from="1668519398493" duration="5263000" />
+      <workItem from="1668519398493" duration="5667000" />
+      <workItem from="1668598232679" duration="32000" />
+      <workItem from="1668609085034" duration="1454000" />
     </task>
     <task id="LOCAL-00001" summary="prawie skończona wersja do poprawek">
       <created>1668512543223</created>
@@ -74,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668512543223</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="poprawki GRASP i PMD">
+      <created>1668526264945</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668526264945</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +109,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prawie skończona wersja do poprawek" />
-    <option name="LAST_COMMIT_MESSAGE" value="prawie skończona wersja do poprawek" />
+    <MESSAGE value="poprawki GRASP i PMD" />
+    <option name="LAST_COMMIT_MESSAGE" value="poprawki GRASP i PMD" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

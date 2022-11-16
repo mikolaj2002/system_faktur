@@ -6,11 +6,11 @@ package org.example;
 import java.io.IOException;
 
 public class Osoba {
-    final String nazwa;
-    final String adres;
-    final String NIP;
-    final String email;
-    final String nrTelefonu;
+    protected final String nazwa;
+    protected final String adres;
+    protected final String NIP;
+    protected final String email;
+    protected final String nrTelefonu;
 
     Osoba() throws IOException {
         System.out.print("Podaj nazwę: ");
@@ -27,6 +27,14 @@ public class Osoba {
 
         System.out.print("Podaj numer telefonu: ");
         nrTelefonu = TakeInput.reader.readLine();
+    }
+
+    Osoba(String n, String a, String nip, String e, String nr) {
+        nazwa = n;
+        adres = a;
+        NIP = nip;
+        email = e;
+        nrTelefonu = nr;
     }
 
     public void wyswietl() {

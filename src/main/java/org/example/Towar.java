@@ -20,6 +20,12 @@ public class Towar {
         procentVat = Integer.parseInt(TakeInput.reader.readLine());
     }
 
+    Towar(String n, float cn, int pVat) {
+        nazwa = n;
+        cenaNetto = cn;
+        procentVat = pVat;
+    }
+
     public String getNazwa() {
         return nazwa;
     }

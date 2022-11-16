@@ -6,8 +6,8 @@ package org.example;
 import java.io.IOException;
 
 public class Element {
-    final Towar towar;
-    final int ilosc;
+    protected final Towar towar;
+    protected final int ilosc;
     private final Kwota kwota;
 
     Element() throws IOException {
@@ -19,6 +19,12 @@ public class Element {
         ilosc = Integer.parseInt(TakeInput.reader.readLine());
 
         //EXPERT: klasa Element liczy cenę elementu
+        kwota = new Kwota(ilosc * towar.getCena(), towar.getVAT());
+    }
+
+    Element(Towar t, int i) {
+        towar = t;
+        ilosc = i;
         kwota = new Kwota(ilosc * towar.getCena(), towar.getVAT());
     }
 

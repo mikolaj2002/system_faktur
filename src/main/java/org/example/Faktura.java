@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 public class Faktura {
     private final String nrFaktury;
-    Osoba sprzedawca;
-    Osoba nabywca;
-    String data;
-    final ArrayList<Element> elementy;
+    protected Osoba sprzedawca;
+    protected Osoba nabywca;
+    protected String data;
+    protected final ArrayList<Element> elementy;
 
     //CREATOR: klasa Faktura tworzy obiekty klasy Osoba, ponieważ są one tylko dla niej potrzebne
     Faktura() throws IOException {
@@ -28,6 +28,14 @@ public class Faktura {
 
         System.out.println("\nNabywca:");
         nabywca = new Osoba();
+    }
+
+    Faktura(String nf, Osoba s, Osoba n, String d) {
+        nrFaktury = nf;
+        sprzedawca = s;
+        nabywca = n;
+        data = d;
+        elementy = new ArrayList<>();
     }
 
     public String getNrFaktury() { return nrFaktury; }
