@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f53392-4176-4d7c-bbcb-049cd5ff5369" name="Changes" comment="poprawki GRASP i PMD">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyleidea-libs/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ElementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/FakturaTest.java" afterDir="false" />
+    <list default="true" id="18f53392-4176-4d7c-bbcb-049cd5ff5369" name="Changes" comment="dodano testy jednostkowe i konstruktory tworzące obiekty na podstawie ich pól">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/ElementDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/FakturaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/IElementDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/IFakturaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/IOsobaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/ITowarDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/OsobaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/db/TowarDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Element.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Element.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Faktura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Faktura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Osoba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Osoba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Towar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Towar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,15 +43,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/mikol/Desktop/Projekty/TP - Lista 2/system_faktur_db",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
@@ -74,7 +74,9 @@
       <workItem from="1668509885410" duration="5016000" />
       <workItem from="1668519398493" duration="5667000" />
       <workItem from="1668598232679" duration="32000" />
-      <workItem from="1668609085034" duration="1454000" />
+      <workItem from="1668609085034" duration="1940000" />
+      <workItem from="1668611101137" duration="7000" />
+      <workItem from="1668611187457" duration="717000" />
     </task>
     <task id="LOCAL-00001" summary="prawie skończona wersja do poprawek">
       <created>1668512543223</created>
@@ -90,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668526264945</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dodano testy jednostkowe i konstruktory tworzące obiekty na podstawie ich pól">
+      <created>1668610730318</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668610730318</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +119,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prawie skończona wersja do poprawek" />
     <MESSAGE value="poprawki GRASP i PMD" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawki GRASP i PMD" />
+    <MESSAGE value="dodano testy jednostkowe i konstruktory tworzące obiekty na podstawie ich pól" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodano testy jednostkowe i konstruktory tworzące obiekty na podstawie ich pól" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
